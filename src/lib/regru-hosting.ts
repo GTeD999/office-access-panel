@@ -214,7 +214,7 @@ function hostingDisplayLabel(
   }
   const root =
     sites.find((s) => s.domain === "example.com" || s.domain === "example.org") ??
-    sites.find((s) => s.domain.split(".").length === 2 && s.domain.includes("novactiv"));
+    sites.find((s) => s.domain.split(".").length === 2);
   if (root) {
     return sites.length > 1 ? `${root.domain} (+${sites.length - 1} сайт.)` : root.domain;
   }
