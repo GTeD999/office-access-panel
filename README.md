@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Novactiv Access
 
-## Getting Started
+Office infrastructure management dashboard — control network access, user provisioning, and service integrations from a single Next.js panel.
 
-First, run the development server:
+## Features
+
+- **Network control** — MikroTik router management (internet on/off, firewall rules)
+- **User provisioning** — Active Directory, Bitrix24, Yandex 360 account creation
+- **VMware integration** — hypervisor VM power management
+- **Domain management** — Reg.ru hosting and DNS control
+- **Credential vault** — encrypted local credential storage
+- **Security** — session-based auth, IP whitelist, management lock rules
+
+## Tech stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js 15, TypeScript, React |
+| Router API | MikroTik REST API (RouterOS 7+) |
+| Integrations | Active Directory, Bitrix24, Yandex 360, VMware, Reg.ru |
+| Auth | HttpOnly session cookies |
+
+## Getting started
 
 ```bash
+cp .env.example .env.local
+# Configure all integration credentials in .env.local
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+See `.env.example`. All sensitive values (router passwords, AD bind credentials, API tokens) must be set via environment variables — never committed to git.
 
-## Learn More
+## Security
 
-To learn more about Next.js, take a look at the following resources:
+This repository contains **source code only**. No credentials, IP addresses, API keys, or client data are included.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Private / portfolio project.

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "source": "example",
+  "categories": [
+    {
+      "id": "agents",
+      "title": "Агенты",
+      "description": "Учётные записи сотрудников",
+      "entries": [
+        {
+          "id": "example-agent",
+          "title": "Пример сотрудника",
+          "username": "user@novactiv.ru",
+          "password": "YOUR_PASSWORD",
+          "group": "Корень/Агенты"
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "title": "Сервисы",
+      "description": "Внешние сервисы",
+      "entries": [
+        {
+          "id": "example-service",
+          "title": "Пример сервиса",
+          "username": "info@novactiv.ru",
+          "password": "YOUR_PASSWORD",
+          "url": "https://example.com",
+          "group": "Корень/Сервисы"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "avito": [
+    {
+      "id": "avito-email",
+      "label": "Avito (info@novactiv.ru)",
+      "login": "info@novactiv.ru",
+      "clientId": "YOUR_CLIENT_ID",
+      "clientSecret": "YOUR_CLIENT_SECRET",
+      "userId": 0
+    },
+    {
+      "id": "avito-phone",
+      "label": "Avito (телефон)",
+      "login": "79915044763",
+      "clientId": "YOUR_CLIENT_ID_2",
+      "clientSecret": "YOUR_CLIENT_SECRET_2"
+    }
+  ],
+  "cian": [
+    {
+      "id": "cian-commercial",
+      "label": "Циан Коммерция",
+      "login": "info@novactiv.ru",
+      "apiKey": "YOUR_CIAN_ACCESS_KEY",
+      "balanceUrl": "https://public-api.cian.ru/.../get-balance/"
+    },
+    {
+      "id": "cian-residential",
+      "label": "Циан Жилая",
+      "login": "infovtorich@novactiv.ru",
+      "apiKey": "YOUR_CIAN_ACCESS_KEY_2",
+      "balanceUrl": ""
+    }
+  ],
+  "yandex360": {
+    "orgId": "YOUR_ORG_ID",
+    "oauthToken": "YOUR_OAUTH_TOKEN",
+    "adminLogin": "novactive@yandex.ru"
+  }
+}
