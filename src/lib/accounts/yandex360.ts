@@ -38,7 +38,7 @@ function yandexStateFile(): string {
 export function getYandexProtectedEmails(): Set<string> {
   const raw =
     process.env.YANDEX360_PROTECT_EMAILS ??
-    "novactive@yandex.ru,helpdesk@novactiv.ru";
+    "admin@example.com,helpdesk@example.com";
   return new Set(
     raw
       .split(",")

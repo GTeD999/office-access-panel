@@ -482,8 +482,8 @@ export default function EmployeesListPanel({ pin, onGoRegister }: Props) {
         )}
 
         <div className="mb-4 rounded-xl border border-blue-500/20 bg-blue-500/5 p-3 text-xs leading-relaxed text-[var(--muted)]">
-          Почта — <strong className="text-foreground">@novactiv.ru</strong>, AD UPN —{" "}
-          <strong className="text-foreground">@novactiv.com</strong>. Cloud: столбец «Cloud» — учётка
+          Почта — <strong className="text-foreground">@example.com</strong>, AD UPN —{" "}
+          <strong className="text-foreground">@example.net</strong>. Cloud: столбец «Cloud» — учётка
           cloud\логин, «Папка» — личная Storage\логин.
         </div>
 

@@ -110,7 +110,7 @@ export async function proxyToMikrotik(
   if (accept) headers.set("Accept", accept);
   const contentType = request.headers.get("content-type");
   if (contentType) headers.set("Content-Type", contentType);
-  headers.set("User-Agent", "Mozilla/5.0 (compatible; NovactivAccess/1.0)");
+  headers.set("User-Agent", "Mozilla/5.0 (compatible; OfficeAccess/1.0)");
 
   const init: RequestInit = {
     method: request.method,

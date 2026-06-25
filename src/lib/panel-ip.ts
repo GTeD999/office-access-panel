@@ -5,7 +5,7 @@ import { getAddressList, upsertAddressListEntry } from "./mikrotik";
 export const PANEL_WHITELIST_COMMENT =
   process.env.PANEL_WHITELIST_COMMENT ??
   process.env.VMWARE_NAT_WHITELIST_COMMENT ??
-  "novactiv-access-panel";
+  "office-access-panel";
 
 const PANEL_ADDRESS_LIST =
   process.env.PANEL_ADDRESS_LIST ??

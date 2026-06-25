@@ -822,8 +822,8 @@ export default function AccountsPanel({ pin }: Props) {
   function canDisableUser(user: YandexMailUser): boolean {
     if (user.isRobot || user.isDismissed || user.isAdmin) return false;
     const protectedEmails = new Set([
-      "novactive@yandex.ru",
-      "helpdesk@novactiv.ru",
+      "admin@example.com",
+      "helpdesk@example.com",
     ]);
     return !protectedEmails.has(user.email.toLowerCase());
   }
@@ -953,7 +953,7 @@ export default function AccountsPanel({ pin }: Props) {
           <div className="flex items-center gap-2">
             <Mail size={18} className="text-[var(--accent)]" />
             <div>
-              <h3 className="font-semibold">Яндекс 360 — почта @novactiv.ru</h3>
+              <h3 className="font-semibold">Яндекс 360 — почта @example.com</h3>
               <p className="text-sm text-[var(--muted)]">
                 {status?.yandex360.connected
                   ? `${status.yandex360.totalUsers} сотрудников`
@@ -1059,7 +1059,7 @@ export default function AccountsPanel({ pin }: Props) {
             <p className="border-t border-[var(--card-border)] px-5 py-3 text-xs text-[var(--muted)]">
               <LogOut size={12} className="mr-1 inline" />
               «Пароль» и «Выйти везде» — для всех активных сотрудников. «Откл.» — не для админов и
-              novactive@yandex.ru / helpdesk. «Отключить всех» не трогает администраторов.
+              admin@example.com / helpdesk. «Отключить всех» не трогает администраторов.
             </p>
           </>
         )}

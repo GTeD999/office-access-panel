@@ -9,7 +9,7 @@ import {
   type MikrotikConfig,
 } from "./mikrotik";
 
-export const GEO_COMMENT_PREFIX = "novactiv:geo:";
+export const GEO_COMMENT_PREFIX = "office:geo:";
 
 const GEO_DIR = path.join(process.cwd(), ".data", "geo");
 const SYNC_STATE_FILE = path.join(GEO_DIR, "sync-state.json");

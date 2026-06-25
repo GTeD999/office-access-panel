@@ -213,7 +213,7 @@ function hostingDisplayLabel(
     return primaryDomain;
   }
   const root =
-    sites.find((s) => s.domain === "novactiv.ru" || s.domain === "novactiv.team") ??
+    sites.find((s) => s.domain === "example.com" || s.domain === "example.org") ??
     sites.find((s) => s.domain.split(".").length === 2 && s.domain.includes("novactiv"));
   if (root) {
     return sites.length > 1 ? `${root.domain} (+${sites.length - 1} сайт.)` : root.domain;

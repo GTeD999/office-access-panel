@@ -1,6 +1,6 @@
 import { mkdir, readFile, writeFile } from "fs/promises";
 import path from "path";
-import { adUpnFromLogin, canonicalNovactivEmail, loginFromEmail } from "./login";
+import { adUpnFromLogin, canonicalCompanyEmail, loginFromEmail } from "./login";
 import { buildCloudFolderPath } from "./cloud-server";
 import type { StoredEmployeeCredentials } from "./types";
 import { resolveDisplayName } from "./display-name";
@@ -41,7 +41,7 @@ export async function saveEmployeeCredentials(input: {
   dryRun?: boolean;
 }): Promise<StoredEmployeeCredentials> {
   const login = (input.login ?? loginFromEmail(input.email)).toLowerCase();
-  const email = canonicalNovactivEmail(login);
+  const email = canonicalCompanyEmail(login);
   const record: StoredEmployeeCredentials = {
     login,
     email,

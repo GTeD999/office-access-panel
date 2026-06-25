@@ -59,7 +59,7 @@ export async function getCloudServerConfig(): Promise<CloudServerConfig | null> 
   if (fromEnv) {
     return {
       host: process.env.CLOUD_SERVER_HOST!,
-      hostname: process.env.CLOUD_SERVER_HOSTNAME ?? "cloud.novactiv.ru",
+      hostname: process.env.CLOUD_SERVER_HOSTNAME ?? "cloud.example.com",
       adminUser: process.env.CLOUD_SERVER_ADMIN_USER!,
       adminPassword: process.env.CLOUD_SERVER_ADMIN_PASSWORD!,
       storageRoot: process.env.CLOUD_SERVER_STORAGE_ROOT ?? "C:\\Storage",
@@ -73,7 +73,7 @@ export async function getCloudServerConfig(): Promise<CloudServerConfig | null> 
 
   return {
     host: fromApi.host,
-    hostname: process.env.CLOUD_SERVER_HOSTNAME ?? "cloud.novactiv.ru",
+    hostname: process.env.CLOUD_SERVER_HOSTNAME ?? "cloud.example.com",
     adminUser: fromApi.adminUser ?? "Администратор",
     adminPassword: fromApi.adminPassword,
     storageRoot: "C:\\Storage",
@@ -83,7 +83,7 @@ export async function getCloudServerConfig(): Promise<CloudServerConfig | null> 
   };
 }
 
-export function buildCloudFolderPath(login: string, hostname = "cloud.novactiv.ru"): string {
+export function buildCloudFolderPath(login: string, hostname = "cloud.example.com"): string {
   const safe = login.trim().toLowerCase();
   return `\\\\${hostname}\\Storage\\${safe}`;
 }

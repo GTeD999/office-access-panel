@@ -3,8 +3,8 @@
   "avito": [
     {
       "id": "avito-email",
-      "label": "Avito (info@novactiv.ru)",
-      "login": "info@novactiv.ru",
+      "label": "Avito (info@example.com)",
+      "login": "info@example.com",
       "clientId": "YOUR_CLIENT_ID",
       "clientSecret": "YOUR_CLIENT_SECRET",
       "userId": 0
@@ -21,14 +21,14 @@
     {
       "id": "cian-commercial",
       "label": "Циан Коммерция",
-      "login": "info@novactiv.ru",
+      "login": "info@example.com",
       "apiKey": "YOUR_CIAN_ACCESS_KEY",
       "balanceUrl": "https://public-api.cian.ru/.../get-balance/"
     },
     {
       "id": "cian-residential",
       "label": "Циан Жилая",
-      "login": "infovtorich@novactiv.ru",
+      "login": "infovtorich@example.com",
       "apiKey": "YOUR_CIAN_ACCESS_KEY_2",
       "balanceUrl": ""
     }
@@ -36,6 +36,6 @@
   "yandex360": {
     "orgId": "YOUR_ORG_ID",
     "oauthToken": "YOUR_OAUTH_TOKEN",
-    "adminLogin": "novactive@yandex.ru"
+    "adminLogin": "admin@example.com"
   }
 }

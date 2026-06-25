@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Одноразовый фикс порядка novactiv:mgmt-lock правил на MikroTik.
+ * Одноразовый фикс порядка office:mgmt-lock правил на MikroTik.
  * Запускать с IP из whitelist (0_WL), пока GEO ещё не работает.
  *
  *   node --env-file=.env.local scripts/fix-mikrotik-mgmt-order.mjs
@@ -48,7 +48,7 @@ async function api(path, init) {
   return text ? JSON.parse(text) : null;
 }
 
-const PREFIX = "novactiv:mgmt-lock";
+const PREFIX = "office:mgmt-lock";
 const COMMENTS = [
   `${PREFIX}:allow-wl`,
   `${PREFIX}:allow-geo`,

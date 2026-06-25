@@ -6,7 +6,7 @@ import {
   type MikrotikConfig,
 } from "./mikrotik";
 
-export const MGMT_LOCK_PREFIX = "novactiv:mgmt-lock";
+export const MGMT_LOCK_PREFIX = "office:mgmt-lock";
 export const MGMT_ALLOW_COMMENT = `${MGMT_LOCK_PREFIX}:allow-wl`;
 export const MGMT_ALLOW_GEO_COMMENT = `${MGMT_LOCK_PREFIX}:allow-geo`;
 export const MGMT_DROP_LAN_COMMENT = `${MGMT_LOCK_PREFIX}:drop-lan`;
@@ -180,7 +180,7 @@ export async function ensureRouterMgmtLock(
       config,
       MGMT_WHITELIST_LIST,
       ip,
-      "novactiv:mgmt-extra",
+      "office:mgmt-extra",
       false,
     );
   }

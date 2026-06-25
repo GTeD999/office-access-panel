@@ -1,5 +1,5 @@
-export const INTERNET_OFF_RULE_COMMENT = "novactiv:office-internet-off";
-export const LOCKED_NAT_MARKER = "novactiv:locked";
+export const INTERNET_OFF_RULE_COMMENT = "office:internet-off";
+export const LOCKED_NAT_MARKER = "office:locked";
 
 function parseIpList(raw: string | undefined, fallback: string): string[] {
   const value = raw?.trim() ? raw : fallback;
@@ -27,7 +27,7 @@ export const INTERNET_EXEMPT_IPS = parseIpList(
   [...CAMERA_IPS, "192.168.1.20"].join(","),
 );
 
-export const INTERNET_EXEMPT_RULE_COMMENT = "novactiv:internet-exempt";
+export const INTERNET_EXEMPT_RULE_COMMENT = "office:internet-exempt";
 
 export function getCameraIps(): Set<string> {
   return new Set(CAMERA_IPS);

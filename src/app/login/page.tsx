@@ -4,8 +4,8 @@ import { Lock, Loader2 } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, Suspense, useCallback, useEffect, useRef, useState } from "react";
 
-const REMEMBER_KEY = "novactiv_remember";
-const SECRET_KEY = "novactiv_device_secret";
+const REMEMBER_KEY = "office_access_remember";
+const SECRET_KEY = "office_device_secret";
 
 function LoginForm() {
   const router = useRouter();
@@ -102,7 +102,7 @@ function LoginForm() {
             <Lock size={22} />
           </div>
           <div>
-            <h1 className="text-xl font-semibold">Novactiv Access</h1>
+            <h1 className="text-xl font-semibold">Office Access</h1>
             <p className="text-sm text-[var(--muted)]">Секретная фраза панели</p>
           </div>
         </div>

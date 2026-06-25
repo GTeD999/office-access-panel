@@ -1,4 +1,4 @@
-const COOKIE_NAME = "novactiv_access";
+const COOKIE_NAME = "office_access";
 const SESSION_VERSION = "v1";
 
 function sessionDays(): number {

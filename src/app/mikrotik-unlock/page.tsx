@@ -4,8 +4,8 @@ import { Loader2, Lock, Router } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, Suspense, useEffect, useState } from "react";
 
-const REMEMBER_KEY = "novactiv_mikrotik_gate_remember";
-const SECRET_KEY = "novactiv_mikrotik_gate_secret";
+const REMEMBER_KEY = "office_mikrotik_gate_remember";
+const SECRET_KEY = "office_mikrotik_gate_secret";
 
 function UnlockForm() {
   const router = useRouter();

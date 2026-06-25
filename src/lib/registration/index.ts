@@ -10,7 +10,7 @@ import { createCloudFolder, loadCloudInventory } from "./folders";
 import { adEmailExists, createAdUser, loadAdUsers, resolveAdUsersOu, type AdUserRef } from "./ad";
 import { bitrixEmailExists, createBitrixUser } from "./bitrix";
 import { loadBitrixDepartments } from "./bitrix-departments";
-import { loginFromEmail, canonicalNovactivEmail } from "./login";
+import { loginFromEmail, canonicalCompanyEmail } from "./login";
 import { createYandexUser, generatePassword, yandexEmailExists } from "./yandex";
 import type {
   EmailCheckResult,
@@ -29,7 +29,7 @@ function normalizeEmail(email: string): string {
 
 function validateInput(input: RegistrationInput): string | null {
   const email = normalizeEmail(input.email);
-  if (!email.includes("@")) return "Укажите полный email (например ivanov@novactiv.ru)";
+  if (!email.includes("@")) return "Укажите полный email (например ivanov@example.com)";
   if (!input.firstName.trim()) return "Укажите имя";
   if (!input.lastName.trim()) return "Укажите фамилию";
   if (!input.departmentId) return "Выберите подразделение";
@@ -426,7 +426,7 @@ export async function registerEmployee(
     const result = await createCloudFolder(email, password, dryRun);
     steps.push({
       id: "folder",
-      label: "Сетевая папка (cloud.novactiv.ru)",
+      label: "Сетевая папка (cloud.example.com)",
       ok: result.ok,
       message: result.ok ? result.message : result.error,
     });
@@ -467,7 +467,7 @@ async function finalize(
   if (ok) {
     const login = loginFromEmail(email);
     data = await saveEmployeeCredentials({
-      email: canonicalNovactivEmail(login),
+      email: canonicalCompanyEmail(login),
       password,
       login,
       departmentName,

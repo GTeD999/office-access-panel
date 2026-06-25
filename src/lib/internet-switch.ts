@@ -108,7 +108,7 @@ export async function getDashboardStatus(options?: {
         (r.comment ?? "").includes("192.168.88.20"),
       );
       const protectedBlocked = findProtectedNatRules(natRules).some(
-        (r) => r.disabled === "true" || (r.comment ?? "").includes("novactiv:locked"),
+        (r) => r.disabled === "true" || (r.comment ?? "").includes("office:locked"),
       );
 
       if (

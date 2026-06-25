@@ -94,7 +94,7 @@ function formatBitrixError(error: unknown): string {
     cause.includes("enotfound") ||
     cause.includes("getaddrinfo")
   ) {
-    return "Нет связи с novactiv.bitrix24.ru — кратковременный сбой DNS. Нажмите «Обновить»; сайт в браузере может открываться, а приложение ходит через другой DNS.";
+    return "Нет связи с your-domain.bitrix24.ru — кратковременный сбой DNS. Нажмите «Обновить»; сайт в браузере может открываться, а приложение ходит через другой DNS.";
   }
 
   if (msg.includes("econnrefused") || msg.includes("econnreset")) {

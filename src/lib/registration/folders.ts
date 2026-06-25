@@ -124,7 +124,7 @@ export async function createCloudFolder(
     return {
       ok: false,
       error:
-        "Сервер cloud.novactiv.ru не настроен — задайте CLOUD_SERVER_* в .env.local или Reg.ru API",
+        "Сервер cloud.example.com не настроен — задайте CLOUD_SERVER_* в .env.local или Reg.ru API",
     };
   }
 

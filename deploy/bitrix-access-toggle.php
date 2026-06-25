@@ -38,7 +38,7 @@ function novactiv_set_closed(bool $closed): void
     Option::set('main', 'site_stopped', $value);
     Option::set('main', 'stop_site', $value);
     if ($closed) {
-        Option::set('main', 'site_stop_reason', 'Доступ временно закрыт. Novactiv Access.');
+        Option::set('main', 'site_stop_reason', 'Доступ временно закрыт. Office Access.');
     }
 }
 

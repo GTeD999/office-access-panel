@@ -3,8 +3,8 @@
 import { ExternalLink, Loader2 } from "lucide-react";
 import { useState } from "react";
 
-const REMEMBER_KEY = "novactiv_mikrotik_gate_remember";
-const SECRET_KEY = "novactiv_mikrotik_gate_secret";
+const REMEMBER_KEY = "office_mikrotik_gate_remember";
+const SECRET_KEY = "office_mikrotik_gate_secret";
 
 type Props = {
   gatewayUrl: string;

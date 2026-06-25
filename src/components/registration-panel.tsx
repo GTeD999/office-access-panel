@@ -172,7 +172,7 @@ export default function RegistrationPanel({ pin, embedded = false }: Props) {
             <div>
               <h2 className="text-xl font-semibold">Регистрация сотрудника</h2>
               <p className="mt-1 text-sm text-[var(--muted)]">
-                Яндекс 360 → Active Directory → Bitrix24 → cloud.novactiv.ru
+                Яндекс 360 → Active Directory → Bitrix24 → cloud.example.com
               </p>
             </div>
             <button
@@ -193,7 +193,7 @@ export default function RegistrationPanel({ pin, embedded = false }: Props) {
             <div className="mb-2">
               <h3 className="text-lg font-semibold">Регистрация сотрудника</h3>
               <p className="mt-1 text-sm text-[var(--muted)]">
-                Яндекс 360 → Active Directory → Bitrix24 → cloud.novactiv.ru · логин = часть email до @
+                Яндекс 360 → Active Directory → Bitrix24 → cloud.example.com · логин = часть email до @
               </p>
             </div>
           )}
@@ -285,7 +285,7 @@ export default function RegistrationPanel({ pin, embedded = false }: Props) {
                       setEmailCheck(null);
                     }}
                     onBlur={() => void checkEmail()}
-                    placeholder="ivanov@novactiv.ru"
+                    placeholder="ivanov@example.com"
                     required
                     className="min-w-0 flex-1 rounded-xl border border-[var(--card-border)] bg-[var(--background)] px-4 py-3 text-sm outline-none focus:border-[var(--accent)]"
                   />
@@ -402,7 +402,7 @@ export default function RegistrationPanel({ pin, embedded = false }: Props) {
                   { key: "yandex", checked: createYandex, set: setCreateYandex, label: "Яндекс 360", icon: Mail },
                   { key: "ad", checked: createAd, set: setCreateAd, label: "Active Directory", icon: Server },
                   { key: "bitrix", checked: createBitrix, set: setCreateBitrix, label: "Bitrix24", icon: Shield },
-                  { key: "folder", checked: createFolder, set: setCreateFolder, label: "Сетевая папка (cloud.novactiv.ru)", icon: FolderOpen },
+                  { key: "folder", checked: createFolder, set: setCreateFolder, label: "Сетевая папка (cloud.example.com)", icon: FolderOpen },
                 ].map(({ key, checked, set, label, icon: Icon }) => (
                   <label
                     key={key}

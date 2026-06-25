@@ -104,7 +104,7 @@ export type EmployeeServices = {
 export type EmployeeRecord = {
   email: string;
   login: string;
-  /** UPN в AD — обычно login@novactiv.com */
+  /** UPN в AD — обычно login@example.net */
   adUpn?: string;
   firstName?: string;
   lastName?: string;

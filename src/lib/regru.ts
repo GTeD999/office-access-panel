@@ -318,7 +318,7 @@ export async function getRegruStatus(): Promise<RegruStatus> {
         ? "Dry-run: услуги не приостанавливаются"
         : services.length === 0
           ? "Услуги не найдены — проверьте аккаунт Reg.ru"
-          : "Переключатель у каждого домена. Если novactiv.team не грузится — пароль панели в Reg.ru → Хостинг → Доступы → REGRU_HOSTING_PASSWORD_90856995 в .env.local.",
+          : "Переключатель у каждого домена. Если example.org не грузится — пароль панели в Reg.ru → Хостинг → Доступы → REGRU_HOSTING_PASSWORD_90856995 в .env.local.",
     };
   } catch (error) {
     const message = formatError(error);

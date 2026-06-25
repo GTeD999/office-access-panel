@@ -342,7 +342,7 @@ export default function RegruPanel({ pin, onMessage, onStatusChange }: Props) {
                 <h3 className="font-semibold text-amber-100">Нужен логин Reg.ru</h3>
                 <p className="mt-2 text-sm text-[var(--muted)]">
                   Логин и пароль из раздела «Доступы» → «Рег.ру». Облачных VPS у вас нет — управляем
-                  хостингами novactiv.ru / novactiv.team и выделенным сервером.
+                  хостингами example.com / example.org и выделенным сервером.
                 </p>
               </div>
             </div>

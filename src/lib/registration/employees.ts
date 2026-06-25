@@ -4,7 +4,7 @@ import { loadBitrixEmailSet } from "./bitrix";
 import { loadCloudInventory } from "./folders";
 import { getCredentialsLoginSet } from "./credentials-store";
 import { findDepartment } from "./departments";
-import { canonicalNovactivEmail, isNovactivEmail, loginFromEmail } from "./login";
+import { canonicalCompanyEmail, isCompanyEmail, loginFromEmail } from "./login";
 import { loadYandexEmailSet } from "./yandex";
 import type {
   EmployeeListResult,
@@ -78,12 +78,12 @@ function mergeEmployee(
   const adUpn =
     patch.adUpn ??
     current?.adUpn ??
-    (patch.adUpnCandidate?.endsWith("@novactiv.com")
+    (patch.adUpnCandidate?.endsWith("@example.net")
       ? normalizeEmail(patch.adUpnCandidate)
       : undefined);
 
   return {
-    email: canonicalNovactivEmail(login),
+    email: canonicalCompanyEmail(login),
     login,
     adUpn,
     firstName: patch.firstName ?? current?.firstName,
@@ -170,7 +170,7 @@ export async function listEmployees(
     }
 
     for (const email of [...yandexEmails, ...bitrixEmails]) {
-      if (!isNovactivEmail(email)) continue;
+      if (!isCompanyEmail(email)) continue;
       const login = loginFromEmail(email);
       if (!login) continue;
       upsert(login, {});

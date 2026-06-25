@@ -110,8 +110,8 @@ export default function Dashboard() {
 
   async function logout() {
     await fetch("/api/auth/logout", { method: "POST" });
-    localStorage.removeItem("novactiv_remember");
-    localStorage.removeItem("novactiv_device_secret");
+    localStorage.removeItem("office_access_remember");
+    localStorage.removeItem("office_device_secret");
     window.location.href = "/login";
   }
 
@@ -233,9 +233,7 @@ export default function Dashboard() {
     <div className="relative z-10 mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
       <header className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="mb-1 text-sm font-medium uppercase tracking-widest text-[var(--accent)]">
-            Novactiv
-          </p>
+          <p className="mb-1 text-sm font-medium uppercase tracking-widest text-[var(--accent)]">Office</p>
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Access Control</h1>
           <p className="mt-2 text-[var(--muted)]">Управление доступом в офисе</p>
         </div>

@@ -3,7 +3,7 @@ import path from "node:path";
 import ldap from "ldapjs";
 import type { AdConfig } from "./config";
 import { COMMERCIAL_PARENT_OU, getSkipOus } from "./config";
-import { adUpnFromLogin, canonicalNovactivEmail, loginFromEmail, samAccountNameFromEmail } from "./login";
+import { adUpnFromLogin, canonicalCompanyEmail, loginFromEmail, samAccountNameFromEmail } from "./login";
 
 let adLdapChain: Promise<unknown> = Promise.resolve();
 
@@ -90,7 +90,7 @@ function ldapSearchUnsafe<T extends Record<string, string | string[] | undefined
   });
 }
 
-const USERS_CONTAINER_DN = "CN=Users,DC=novactiv,DC=com";
+const USERS_CONTAINER_DN = "CN=Users,DC=example,DC=com";
 
 const CYRILLIC_TO_LATIN: Record<string, string> = {
   а: "a",
@@ -198,8 +198,8 @@ function ldapModify(
 
 /** Группы доступа коммерческих отделов (CN в AD) */
 const AD_COMMERCIAL_GROUPS = {
-  commercial1_users: "CN=commercial1_users,CN=Users,DC=novactiv,DC=com",
-  commercial2_users: "CN=commercial2_users,CN=Users,DC=novactiv,DC=com",
+  commercial1_users: "CN=commercial1_users,CN=Users,DC=example,DC=com",
+  commercial2_users: "CN=commercial2_users,CN=Users,DC=example,DC=com",
 } as const;
 
 /** По фамилии руководителя в OU подбираем группу сотрудников */
@@ -574,7 +574,7 @@ export async function createAdUser(
 ): Promise<{ ok: true; samAccountName: string; dn: string; note?: string; adGroup?: string } | { ok: false; error: string }> {
   const email = input.email.trim().toLowerCase();
   const samAccountName = buildSamAccountName(email);
-  const workEmail = canonicalNovactivEmail(samAccountName);
+  const workEmail = canonicalCompanyEmail(samAccountName);
   const upn = adUpnFromLogin(samAccountName);
   const displayName = buildCn(input.firstName, input.lastName, input.middleName);
   const cnForDn = buildCnForDn(input.firstName, input.lastName, input.middleName);
@@ -607,7 +607,7 @@ export async function createAdUser(
       mail: workEmail,
       ...(input.position ? { title: input.position } : {}),
       userAccountControl: "546",
-      description: `Создано Novactiv Access Panel. Целевой OU: ${targetOu}`,
+      description: `Создано Office Access Panel. Целевой OU: ${targetOu}`,
     });
 
     const activateResult = await activateAdUser(

@@ -36,7 +36,7 @@ function envCianAccounts(): CianAccountConfig[] {
       id: "cian-commercial",
       label: "Циан Коммерция",
       apiKey: commercial,
-      login: process.env.CIAN_LOGIN_COMMERCIAL ?? "info@novactiv.ru",
+      login: process.env.CIAN_LOGIN_COMMERCIAL ?? "info@example.com",
       balanceUrl: process.env.CIAN_BALANCE_URL_COMMERCIAL,
     });
   }
@@ -47,7 +47,7 @@ function envCianAccounts(): CianAccountConfig[] {
       id: "cian-residential",
       label: "Циан Жилая",
       apiKey: residential,
-      login: process.env.CIAN_LOGIN_RESIDENTIAL ?? "infovtorich@novactiv.ru",
+      login: process.env.CIAN_LOGIN_RESIDENTIAL ?? "infovtorich@example.com",
       balanceUrl: process.env.CIAN_BALANCE_URL_RESIDENTIAL,
     });
   }

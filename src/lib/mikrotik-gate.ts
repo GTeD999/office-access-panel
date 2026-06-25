@@ -1,4 +1,4 @@
-const COOKIE_NAME = "novactiv_mikrotik_gate";
+const COOKIE_NAME = "office_mikrotik_gate";
 const SESSION_VERSION = "v1";
 
 function sessionDays(): number {

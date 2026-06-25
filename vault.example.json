@@ -10,7 +10,7 @@
         {
           "id": "example-agent",
           "title": "Пример сотрудника",
-          "username": "user@novactiv.ru",
+          "username": "user@example.com",
           "password": "YOUR_PASSWORD",
           "group": "Корень/Агенты"
         }
@@ -24,7 +24,7 @@
         {
           "id": "example-service",
           "title": "Пример сервиса",
-          "username": "info@novactiv.ru",
+          "username": "info@example.com",
           "password": "YOUR_PASSWORD",
           "url": "https://example.com",
           "group": "Корень/Сервисы"

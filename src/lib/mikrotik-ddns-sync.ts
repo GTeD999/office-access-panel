@@ -1,9 +1,9 @@
 import { MGMT_WHITELIST_LIST } from "./config";
 import type { MikrotikConfig } from "./mikrotik";
 
-export const DDNS_SYNC_SCRIPT_NAME = "novactiv-ddns-whitelist";
-export const DDNS_SYNC_SCHEDULER_NAME = "novactiv-ddns-whitelist";
-export const DDNS_WHITELIST_COMMENT = "novactiv-ddns";
+export const DDNS_SYNC_SCRIPT_NAME = "office-ddns-whitelist";
+export const DDNS_SYNC_SCHEDULER_NAME = "office-ddns-whitelist";
+export const DDNS_WHITELIST_COMMENT = "office-ddns";
 
 function parseDdnsHosts(): string[] {
   const raw = process.env.PANEL_DDNS_HOSTNAME?.trim();
@@ -114,7 +114,7 @@ export async function ensureRouterDdnsWhitelistSync(
         interval: "5m",
         "on-event": DDNS_SYNC_SCRIPT_NAME,
         disabled: "false",
-        comment: "novactiv:ddns-whitelist",
+        comment: "office:ddns-whitelist",
       }),
     });
   }

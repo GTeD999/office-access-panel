@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Novactiv Access",
+  title: "Office Access",
   description: "Управление доступом в офисе",
 };
 
