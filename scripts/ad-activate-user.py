@@ -116,7 +116,7 @@ def main() -> None:
     ad_domain = payload.get("domain") or os.environ.get("AD_NETBIOS_DOMAIN", "NOVACTIV")
     bind_user = payload.get("bindUser") or os.environ.get("AD_BIND_USER", "")
     bind_password = payload.get("bindPassword") or os.environ.get("AD_BIND_PASSWORD", "")
-    base_dn = os.environ.get("AD_BASE_DN", "DC=novactiv,DC=com")
+    base_dn = os.environ.get("AD_BASE_DN", "DC=office,DC=com")
 
     if not sam or not bind_user or not bind_password:
         print(json.dumps({"ok": False, "error": "Нужны samAccountName и учётные данные AD"}))

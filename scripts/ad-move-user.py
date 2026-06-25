@@ -69,7 +69,7 @@ def main() -> None:
     server = Server(server_addr, use_ssl=use_ssl)
     conn = Connection(server, user=bind_user, password=bind_password, auto_bind=True)
 
-    base_dn = os.environ.get("AD_BASE_DN", "DC=novactiv,DC=com")
+    base_dn = os.environ.get("AD_BASE_DN", "DC=office,DC=com")
     conn.search(base_dn, f"(sAMAccountName={sam_account})", SUBTREE, attributes=["distinguishedName"])
     if not conn.entries:
         print(json.dumps({"ok": False, "error": f"Пользователь {sam_account} не найден"}))
